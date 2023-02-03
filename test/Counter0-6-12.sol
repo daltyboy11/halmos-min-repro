@@ -1,14 +1,15 @@
-// SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.8.16;
+// SPDX-License-Identifier: MIT
+pragma solidity >=0.6.12;
+pragma experimental ABIEncoderV2;
 
 import "forge-std/Test.sol";
-import { Counter } from "../src/Counter.sol";
+import { Counter0612 } from "../src/Counter0-6-12.sol";
 
 contract CounterTest is Test {
-    Counter public counter;
+    Counter0612 public counter;
 
     function setUp() public {
-        counter = new Counter();
+        counter = new Counter0612();
         counter.setNumber(0);
     }
 
